@@ -160,6 +160,189 @@ figcaption {
     }
 }
 
+/* Estilos para a seção de filmes */
+.most-watched-section {
+    width: 100%;
+    max-width: 1200px;
+    animation: slideUp 0.8s ease;
+}
+
+#profileName {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--netflix-red);
+}
+
+#moviesGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.movies-category {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.movies-category h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--netflix-red);
+    padding-bottom: 10px;
+}
+
+.movies-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.movie-card {
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #2a2a2a;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+}
+
+.movie-card p {
+    padding: 12px;
+    text-align: center;
+    font-size: 0.9rem;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 24px rgba(144, 19, 175, 0.4);
+}
+
+.movie-card:hover img {
+    filter: brightness(1.2);
+}
+
+.back-btn {
+    background-color: var(--netflix-red);
+    color: var(--text-primary);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: var(--transition);
+    margin: 20px auto;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    background-color: #b818d6;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(144, 19, 175, 0.5);
+}
+
+/* Modal de vídeo */
+.video-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: fadeIn 0.3s ease;
+}
+
+.video-modal-content {
+    position: relative;
+    margin: auto;
+    width: 90%;
+    max-width: 900px;
+    height: 90%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 50px rgba(144, 19, 175, 0.8);
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: var(--netflix-red);
+    color: var(--text-primary);
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    transition: var(--transition);
+}
+
+.close-modal:hover {
+    background-color: #b818d6;
+    transform: scale(1.1);
+}
+
+#videoFrame {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+@media (max-width: 768px) {
+    #profileName {
+        font-size: 1.8rem;
+    }
+
+    .movies-row {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 15px;
+    }
+
+    .movie-card img {
+        height: 180px;
+    }
+
+    .video-modal-content {
+        width: 95%;
+        height: 80%;
+    }
+
+    .close-modal {
+        right: 10px;
+        top: 10px;
+        font-size: 1.5rem;
+        width: 35px;
+        height: 35px;
+    }
+}
+
 @media (max-width: 480px) {
     h1 {
         font-size: 1.8rem;
@@ -172,5 +355,22 @@ figcaption {
     .container {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+    }
+
+    #profileName {
+        font-size: 1.3rem;
+    }
+
+    .movies-row {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 10px;
+    }
+
+    .movie-card img {
+        height: 150px;
+    }
+
+    .movies-category h3 {
+        font-size: 1.1rem;
     }
 }
