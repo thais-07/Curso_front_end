@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>  
+        <header>
+            <h1>Quem está assistindo?</h1>
+        </header>
+        
+        <section class="container">
+            <article class="profile">
+                <figure>
+                    <img src="assets/perfil1.png" alt="Perfil 1">
+                    <figcaption>Thais</figcaption>
+                </figure>
+            </article>
+
+            <article class="profile">
+                <figure>
+                    <div class="add-profile">
+                        <img src="assets/perfil2.png" alt="Perfil 2">
+                    </div>
+                    <figcaption>Lais</figcaption>
+                </figure>
+            </article>
+            <article class="profile">
+                <figure>
+                    <img src="assets/perfil3.png" alt="Perfil 3">
+                    <figcaption>Marlene</figcaption>
+                </figure>
+            </article>
+            <article class="profile">
+                <figure>
+                    <img src="assets/perfil4.png" alt="Perfil 4">
+                    <figcaption>Edevaldo</figcaption>
+                </figure>
+            </article>
+            <article class="profile">
+                <figure>
+                    <img src="assets/perfil5.png" alt="Perfil 5">
+                    <figcaption>Taina</figcaption>
+                </figure>
+            </article>
+        </section>
+    <section class="most-watched-section" id="mostWatchedSection" style="display: none;">
+            <h2 id="profileName"></h2>
+            <div class="movies-grid" id="moviesGrid">
+                <!-- Os filmes serão adicionados aqui via JavaScript -->
+            </div>
+            <button id="backButton" class="back-btn">Voltar</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
